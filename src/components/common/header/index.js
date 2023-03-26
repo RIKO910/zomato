@@ -1,6 +1,7 @@
 import React from 'react';
 import "./header.css";
-import logo from '../header/zomato-logo.png'
+import logo from '../header/zomato-logo.png';
+import user from '../header/user.png';
 const Header = () => {
     return (
         <div className='max-width header'>
@@ -14,8 +15,17 @@ const Header = () => {
                         </div>
                         <i className="fi fi-rr-caret-down absolute-center"></i>
                     </div>
+                    <div className='location-search-separator'></div>
+                    <div className='header-searchbar'>
+                    <i class="fi fi-rr-search absolute-center search-icon"></i>
+                    <input placeholder='Search for restaurant ,cuisine or a dish' className='search-input'/>
+                    </div>
                 </div>
-                
+                <div className='profile-wrapper'>
+                    <img src={user} alt="Profile" className='user-logo'/>
+                    <span className='header-username '>Riko</span>
+                    <i class="fi fi-rr-angle-small-down absolute-center profile-option-icon"></i>
+                </div>
             </div>
         </div>
     );
