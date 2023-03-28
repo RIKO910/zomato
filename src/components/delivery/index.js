@@ -1,6 +1,8 @@
 import React from 'react';
 import Filters from '../common/filters';
 import './delivery.css'
+import DeliveryCollections from './deliveryCollection';
+import TopBrands from './topBrands';
 
 const deliveryFilters=[
     {
@@ -22,7 +24,7 @@ const deliveryFilters=[
     },
     {
         id:5,
-        icon:<i class="fi fi-ss-time-twenty-four absolute-center"></i>,
+        icon:<i class="fi fi-rr-apps-sort absolute-center"></i>,
         title:'Delivery Time'
     },
     {
@@ -38,8 +40,9 @@ const Delivery = () => {
             <Filters 
             filtersList={deliveryFilters}
             ></Filters>
-            </div>
-           
+            </div> 
+            <DeliveryCollections></DeliveryCollections>
+            <TopBrands></TopBrands>
         </div>
     );
 };
