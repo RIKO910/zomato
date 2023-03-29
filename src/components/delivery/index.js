@@ -1,8 +1,10 @@
 import React from 'react';
+import ExploreSection from '../common/exploreSection';
 import Filters from '../common/filters';
 import './delivery.css'
 import DeliveryCollections from './deliveryCollection';
 import TopBrands from './topBrands';
+import restaurents from "../../data/restaurants"
 
 const deliveryFilters=[
     {
@@ -32,7 +34,7 @@ const deliveryFilters=[
         title:'Great Offers'
     },
 ]
-
+const restaurantsList = restaurents;
 const Delivery = () => {
     return (
         <div>
@@ -43,6 +45,10 @@ const Delivery = () => {
             </div> 
             <DeliveryCollections></DeliveryCollections>
             <TopBrands></TopBrands>
+            <ExploreSection 
+             list={restaurantsList}
+             collectionName="Delivery Restaurants in Dhaka"
+            ></ExploreSection>
         </div>
     );
 };
